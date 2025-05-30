@@ -1,0 +1,10 @@
+# Ignore raw data
+data/raw/
+*.csv
+# Allow small processed CSVs
+!data/processed/team_staff_strength.csv
+!data/processed/top_pitchers_by_pitch_type.csv
+# Ignore large figures
+reports/figures/*.png
+# Keep key ones
+!reports/figures/BOS_2025_pitcher_heatmap_with_legend.png
