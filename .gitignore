@@ -1,10 +1,34 @@
-# Ignore raw data
+# Ignore raw data files
 data/raw/
-*.csv
-# Allow small processed CSVs
+data/**/*.csv
+
+# Keep small key processed files
 !data/processed/team_staff_strength.csv
 !data/processed/top_pitchers_by_pitch_type.csv
-# Ignore large figures
-reports/figures/*.png
-# Keep key ones
+!data/processed/player_id_name.csv
+!data/processed/bos_pitcher_vs_league_2025.csv
+
+# Ignore all figures by default
+reports/figures/*
+
+# Allow select images (key visuals)
+!reports/figures/top_10_improved_teams.png
+!reports/figures/top_10_declining_teams.png
 !reports/figures/BOS_2025_pitcher_heatmap_with_legend.png
+
+# Python junk
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook exports
+*.pdf
+*.html
+
+# Environment
+.env
+
